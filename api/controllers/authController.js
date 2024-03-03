@@ -4,7 +4,7 @@ exports.register = async (req, res) => {
   try {
     const { token, user } = await authService.register(req.body);
 
-    res.cookie('token', token).json(user);
+    res.cookie('token', token, { sameSite: 'none', secure: true }).json(user);
   } catch (error) {
     res.status(422).json(error);
   }
@@ -14,7 +14,7 @@ exports.login = async (req, res) => {
   try {
     const { token, user } = await authService.login(req.body);
 
-    res.cookie('token', token).json(user);
+    res.cookie('token', token, { sameSite: 'none', secure: true }).json(user);
   } catch (error) {
     res.status(422).json(error);
   }

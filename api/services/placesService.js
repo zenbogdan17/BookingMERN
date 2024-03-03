@@ -112,8 +112,6 @@ exports.bookingPlace = async (req) => {
 exports.getUserBooking = async (req) => {
   const { token } = req.cookies;
 
-  console.log(token);
-
   const { _id } = await jwtVerification(token);
   if (!_id) throw new Error('User not found');
 
