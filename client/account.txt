@@ -1,0 +1,11 @@
+1.  name: Emma 
+    email: emmasmith@gmail.com
+    password: 123454321
+
+2.  name: James  
+    email: jamesjones@gmail.com
+    password: 123454321
+
+3.  name: William  
+    email: williamdavis@gmail.com
+    password: 123454321
