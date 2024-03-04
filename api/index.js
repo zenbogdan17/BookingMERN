@@ -13,7 +13,10 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: ['https://airbnb-zenbogdan.netlify.app', 'http://localhost:5173'],
+    origin: [
+      'https://booking-mern-client.vercel.app/',
+      'http://localhost:5173',
+    ],
   })
 );
 

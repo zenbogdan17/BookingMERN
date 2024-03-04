@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import PlacePhotos from './components/PlacePhotos';
 import BookingWidget from './components/BookingWidget';
@@ -50,7 +50,7 @@ const PlacePage = () => {
   };
 
   const handleShareClick = () => {
-    const linkToPlace = urlClient + '/place/' + id;
+    const linkToPlace = window.location.href;
 
     navigator.clipboard.writeText(linkToPlace).then(() => {
       toast('Copied link to place');
