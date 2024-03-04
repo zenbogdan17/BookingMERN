@@ -14,7 +14,7 @@ app.use(
   cors({
     credentials: true,
     origin: [
-      'https://booking-mern-client.vercel.app/',
+      'https://booking-mern-zenbogdan.vercel.app',
       'http://localhost:5173',
     ],
   })
